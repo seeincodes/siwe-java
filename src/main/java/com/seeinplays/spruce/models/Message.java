@@ -1,5 +1,7 @@
 package com.seeinplays.spruce.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +11,8 @@ import org.web3j.abi.datatypes.Address;
 import java.net.URI;
 import java.net.URL;
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.*;
+
 
 @Getter
 @Setter
