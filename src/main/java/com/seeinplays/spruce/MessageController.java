@@ -14,15 +14,10 @@ public class MessageController {
 
     @PostMapping("/sign_in")
     public @ResponseBody Message getMessage(@RequestBody Message requestMessage) {
-        Message message = new Message();
-
-        message.setVersion("1");
-        message.setAddress(requestMessage.getAddress());
-
-        return message;
+        return service.generateMessage(requestMessage);
     }
 
-    @GetMapping("/oing")
+    @GetMapping("/ping")
     public String ping() {
         return "ping pong!";
     }
